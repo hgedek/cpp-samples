@@ -8,3 +8,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(address_of address_of.cpp)
 add_executable(aliasing_with_template aliasing_with_template.cpp)
+add_executable(variadic_template_indexing variadic_template_indexing.cpp)
