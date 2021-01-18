@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
+set(CMAKE_C_COMPILER /usr/bin/gcc)
+set(CMAKE_CXX_COMPILER /usr/bin/g++)
+
 project(cpp_samples)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -29,3 +32,6 @@ add_executable(lambda_unary lambda_unary.cpp)
 add_executable(lower_bound lower_upper_bound.cpp)
 add_executable(mapping mapping.cpp)
 add_executable(memcpy memcpy.cpp)
+add_executable(metafunction metafunction.cpp)
+add_executable(noncopyable noncopyable.cpp)
+add_executable(nvi nvi.cpp)
