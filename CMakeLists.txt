@@ -14,4 +14,5 @@ add_executable(checked_deletor checked_deletor.cpp)
 add_executable(compile_time_next_prev compile_time_next_prev.cpp)
 add_executable(constexpr constexpr.cpp)
 add_executable(construct construct.cpp)
-
+add_executable(ctor_exception ctor_exception.cpp)
+add_executable(mutable_lambda mutable_lambda.cpp)
