@@ -27,4 +27,14 @@ int main() {
    
    // referencing a variable will effect its value 
     std::cout << a << std::endl;
+
+
+    auto l3 = [count = 0]() mutable {
+        int arr[] = {0,1,2,3,4,5,6};
+        for (auto i = 0; i < sizeof(arr)/sizeof(arr[0]); ++i)
+            count++;
+        return count;
+    };
+
+    std::cout << l3() << std::endl;
 }
