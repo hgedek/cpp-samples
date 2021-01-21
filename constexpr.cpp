@@ -20,5 +20,4 @@ int main() {
     constexpr auto R = Rectangle{2,2};
 
     static_assert(R.size() == 4, "ups");
-
 }
