@@ -5,6 +5,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <cctype>
 
 // all - none - any...of
 
@@ -154,6 +155,18 @@ void test_transform() {
 
     std::copy(v3.begin(), v3.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
+
+    // lower & upper
+    //
+    std::string s = "fdsfdsafdsafdsaf";
+    std::cout << s << " : ";
+
+    std::transform(s.begin(), s.end(), s.begin(), toupper);
+
+    std::cout << s << " : ";
+
+    std::transform(s.begin(), s.end(), s.begin(), tolower);
+    std::cout << s << std::endl;
 }
 
 void test_unique() {
