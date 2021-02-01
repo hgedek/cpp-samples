@@ -14,6 +14,7 @@ void test_memset() {
     puts(text);
 }
 
+/*
 void test_memset_s() {
     char text[] = "sample text";
     puts(text);
@@ -21,6 +22,7 @@ void test_memset_s() {
     memset_s(text, sizeof(text), '!', 4);
     puts(text);
 }
+*/
 
 void test_memcmp() {
     const char* str1 = "sample";
@@ -33,6 +35,6 @@ void test_memcmp() {
 
 int main() {
     test_memset();
-    test_memset_s();
+   // test_memset_s();
     test_memcmp();
 }
