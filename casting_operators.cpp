@@ -11,9 +11,9 @@ struct B {
 
   // group 1
   // ctors
-  explicit B(int value): value(value) {}
-  explicit B(std::string const& str): value(std::stoi(str)) {}
-  B(const A& a): value(a.value) {}
+  B(int value): value(value) {}
+  B(std::string const& str): value(std::stoi(str)) {}
+  B(A const& a): value(a.value) {}
 
   // group2
   // assignment operators
@@ -44,9 +44,22 @@ int main() {
  
   A a {10};
 
-  // group1
-  B b = a;
+  using namespace std::literals::string_literals;
 
+  // group1
+  B b1 = a;
+  B b2 = 0;
+  B b3 = "0"s;
+
+  // group 2
+  b1 = a;
+  b2 = 0;
+  b3 = "0"s;
+
+  //group 3
+  a = b1;
+  int x = b2;
+  std::string s = b3;
 
   return 0;
 }
