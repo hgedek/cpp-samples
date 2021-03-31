@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <typeindex>
 #include <typeinfo>
+#include <functional>
 
 template <class T, class U>
 const T to(const U& op);

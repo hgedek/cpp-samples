@@ -8,6 +8,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+
 add_executable(address_of address_of.cpp)
 add_executable(aliasing_with_template aliasing_with_template.cpp)
 add_executable(array_type array_type.cpp)
@@ -78,3 +82,6 @@ add_executable(c_variadics c_variadics.cpp)
 add_executable(file_reader file_reader.cpp)
 add_executable(regex_samples regex_samples.cpp)
 add_executable(usable_c_functions usable_c_functions.cpp)
+add_executable(casting_operators casting_operators.cpp)
+
+target_link_libraries(threading PRIVATE Threads::Threads)

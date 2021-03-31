@@ -1,5 +1,6 @@
 #include <iostream>
 #include <utility>
+#include <functional>
 
 void foo(int&) { std::cout << "lvalue" << std::endl; }
 void foo(const int&) { std::cout << "const lvalue" << std::endl; }

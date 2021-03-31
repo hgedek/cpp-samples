@@ -4,6 +4,7 @@
 #include <array>
 #include <vector>
 #include <chrono>
+#include <cstring>
 
 #define NOW std::chrono::high_resolution_clock::now();
 

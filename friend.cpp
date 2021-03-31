@@ -12,9 +12,10 @@ public:
     }
 };
 
+#ifndef __GNUC__
 struct S;
 
-template <class T> void bar(T const &, S const&);
+template<class T> friend void bar(T const &, S const&);
 
 struct S {
     int value;
@@ -30,4 +31,7 @@ int main() {
     S s = {2};
     bar(1, s);
 }
-
+#else 
+int main() {
+}
+#endif

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <functional>
 
 
 void foo(int& ) { std::cout << "lvalue" << std::endl; }
