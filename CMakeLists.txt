@@ -4,9 +4,9 @@ set(CMAKE_CXX_COMPILER /usr/bin/g++)
 
 project(cpp_samples)
 
-set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
 
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
@@ -83,5 +83,9 @@ add_executable(file_reader file_reader.cpp)
 add_executable(regex_samples regex_samples.cpp)
 add_executable(usable_c_functions usable_c_functions.cpp)
 add_executable(casting_operators casting_operators.cpp)
+add_executable(atomics atomics.cpp)
+add_executable(template_bounded_array template_bounded_array.cpp)
+add_executable(span span.cpp)
 
 target_link_libraries(threading PRIVATE Threads::Threads)
+target_link_libraries(atomics PRIVATE Threads::Threads)
