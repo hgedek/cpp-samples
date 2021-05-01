@@ -1,3 +1,5 @@
+#if defined __has_include
+#if __has_include(<concepts>)
 #include <concepts>
 #include <iostream>
 
@@ -32,13 +34,20 @@ namespace std {
 template <Hashable T>
 void foo(T const& ) {}
 
+
+template <class T, class U>
+concept Derived = std::is_base_of<U,T>::value;
+
+
 int main() {
   println("Example:", "1" , "2", "a", "[", "]" );
 
   A a;
   foo(a);  
 
-
   // B b;
   /// foo(b);
 }
+#endif
+#endif
+
