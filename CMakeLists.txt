@@ -86,6 +86,8 @@ add_executable(casting_operators casting_operators.cpp)
 add_executable(atomics atomics.cpp)
 add_executable(template_bounded_array template_bounded_array.cpp)
 add_executable(span span.cpp)
+add_executable(multiple_inheritance multiple_inheritance.cpp)
+add_executable(concepts concepts.cpp)
 
 target_link_libraries(threading PRIVATE Threads::Threads)
 target_link_libraries(atomics PRIVATE Threads::Threads)
